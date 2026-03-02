@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+    <h:head>
+    <title>Course Survey</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    
+    <h:body>
+        <h:form>
+            
+        <h3>Question 9</h3>
+        <p>9. The instructor was accessible outside of class.</p>
+        <h:selectOneRadio value="#{userData.answers[9]}">
+            <f:selectItem itemValue = "Yes" itemLabel = "Yes" />
+            <f:selectItem itemValue = "No" itemLabel = "No" />
+            
+        </h:selectOneRadio> 
+        
+        <p>10. Did the instructor actively attempt to prevent cheating in this course?</p>
+            <h:selectOneRadio value="#{userData.answers[10]}">
+            <f:selectItem itemValue = "Yes" itemLabel = "Yes" />
+            <f:selectItem itemValue = "No" itemLabel = "No" />
+            
+        </h:selectOneRadio> 
+        
+        <h:outputLabel value = "Comments (Teaching Approaches)"/>
+            <h:inputText id = "Comments"  required = "true">
+            </h:inputText>
+        
+        <h:commandButton value = "Save and Continue" action ="#{userData.submit('Question3.xhtml')}" />
+        
+        </h:form> 
+    </h:body>
+
+</html>

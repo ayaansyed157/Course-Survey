@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+    
+    <h:head>
+        <title>Course Survey</title>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <h1>COMMENTS ON STRENGTHS AND WAYS OF IMPROVEMENT </h1>
+        <h:form>
+        
+        <h:outputText value = "What changes would you recommend to improve this course?"/>
+        <h:inputText   required = "true">
+            </h:inputText>
+        <h:outputLabel value = "What did you like best about your instructors teaching?"/>
+        <h:inputText  required = "true">
+            </h:inputText>
+        <h:outputLabel value = "What did you like least about your instructor’s teaching?"/>
+        <h:inputText   required = "true">
+            </h:inputText>
+        <h:outputLabel value = "Any further, constructive comment:"/>
+        <h:inputText   required = "true">
+            </h:inputText>
+        
+        <h:commandButton value = "Finish and View" action ="#{userData.SaveSurvey}" />
+</h:form> 
+        </h:body>
+</html>

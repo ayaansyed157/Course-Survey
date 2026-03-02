@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:ui="jakarta.faces.facelets">
+    <h:head>
+        <title>Course Survey Summary</title>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <h2>Course Survey Summary</h2>
+        <h:form>
+            <ui:repeat value ="#{userData.summaryResults}" var ="row">
+                <h3>Question #{row.question_id}</h3>
+                <p>#{row.questionText}</p>
+                <p>You selected:  #{row.answer}</p>
+            
+            </ui:repeat>
+        </h:form>
+    </h:body>
+</html>

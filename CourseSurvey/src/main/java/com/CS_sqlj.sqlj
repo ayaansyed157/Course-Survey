@@ -1,0 +1,46 @@
+#sql iterator surveyIter(int question_id, String question_text, String answer_text);
+public class CS_SQLj {
+    
+public void insertResponse(int survey_id, int question_id, String answer_text){
+
+throw SQLException{
+    #sql {
+    INSERT INTO Answer (survey_id, question_id, answer_text) 
+    VALUES (:survey_id, :question_id, :answer_text)
+    };
+}
+           
+    
+
+}
+
+public List<SummaryRow> results(int survey_id){
+    throw SQLException{
+        List<SummaryRow> list = new ArrayList<>();
+        #sql 
+        {
+        SELECT q.question_id, q.question_text, a.answer_text FROM Answer a 
+         JOIN Question q ON q.question_id = a.question_id 
+         WHERE a.survey_id = :survey_id 
+         ORDER BY q.question_id
+
+        };
+
+        SurveyIter iter;
+
+           while(iter.next()){
+           list.add(new SummaryRow(iter.question_id, 
+                    iter.question_text, 
+                    iter.answer_text))
+
+           );
+           }
+    }
+    
+    return list;
+    }
+   
+}
+
+
+

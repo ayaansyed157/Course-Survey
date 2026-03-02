@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+    
+     <h:head>
+        <title>Course Survey</title>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <h1>Student Self Evaluation</h1>
+        <h:form>
+       <h3>Question 26</h3>
+        <p>26. I contributed constructively during in-class activities.</p>
+            <h:selectOneRadio value="#{userData.answers[26]}">
+            <f:selectItem itemValue = "Strongly Agree" itemLabel = "Strongly Agree" />
+        <f:selectItem itemValue = "Agree" itemLabel = "Agree" />
+        <f:selectItem itemValue = "Neutral" itemLabel = "Neutral" />
+        <f:selectItem itemValue = "Disagree" itemLabel = "Disagree" />
+        <f:selectItem itemValue = "Strongly Disagree" itemLabel = "Strongly Disagree" />
+        </h:selectOneRadio>
+        
+        <h3>Question 27</h3>
+        <p>27. I feel I am achieving the learning outcomes.</p>
+        <h:selectOneRadio value="#{userData.answers[27]}">
+        <f:selectItem itemValue = "Strongly Agree" itemLabel = "Strongly Agree" />
+        <f:selectItem itemValue = "Agree" itemLabel = "Agree" />
+        <f:selectItem itemValue = "Neutral" itemLabel = "Neutral" />
+        <f:selectItem itemValue = "Disagree" itemLabel = "Disagree" />
+        <f:selectItem itemValue = "Strongly Disagree" itemLabel = "Strongly Disagree" />
+        </h:selectOneRadio>
+        
+        <h:outputLabel value = "Comments (Student Self Evaluation)"/>
+        <h:inputText id = "Comments"  required = "true">
+            </h:inputText>
+        <h:commandButton value = "Save and Continue" action ="#{userData.submit('Question8.xhtml')}" />
+</h:form> 
+        </h:body>
+</html>

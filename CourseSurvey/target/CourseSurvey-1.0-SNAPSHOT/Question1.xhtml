@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+    <h:head>
+        <title>Course Survey</title>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <h:form>
+        <h3>Question 1</h3>
+        <p>The instructor stimulated my interest in the subject</p>
+        <h:selectOneRadio value="#{userData.answers[1]}">
+        <f:selectItem itemValue = "Strongly Agree" itemLabel = "Strongly Agree" />
+        <f:selectItem itemValue = "Agree" itemLabel = "Agree" />
+        <f:selectItem itemValue = "Neutral" itemLabel = "Neutral" />
+        <f:selectItem itemValue = "Disagree" itemLabel = "Disagree" />
+        <f:selectItem itemValue = "Strongly Disagree" itemLabel = "Strongly Disagree" />
+        </h:selectOneRadio>
+      
+        <h3>Question 2</h3>
+        <p>The instructor managed classroom time and pace well.</p>
+            <h:selectOneRadio value="#{userData.answers[2]}">
+            <f:selectItem itemValue = "Strongly Agree" itemLabel = "Strongly Agree" />
+        <f:selectItem itemValue = "Agree" itemLabel = "Agree" />
+        <f:selectItem itemValue = "Neutral" itemLabel = "Neutral" />
+        <f:selectItem itemValue = "Disagree" itemLabel = "Disagree" />
+        <f:selectItem itemValue = "Strongly Disgree" itemLabel = "Strongly Disagree" />
+        </h:selectOneRadio>
+        
+        <h3>Question 3</h3>
+        <p>The instructor was organized and prepared for
+every class</p>
+        <h:selectOneRadio value="#{userData.answers[3]}">
+        <f:selectItem itemValue = "Strongly Agree" itemLabel = "Strongly Agree" />
+        <f:selectItem itemValue = "Agree" itemLabel = "Agree" />
+        <f:selectItem itemValue = "Neutral" itemLabel = "Neutral" />
+        <f:selectItem itemValue = "Disagree" itemLabel = "Disagree" />
+        <f:selectItem itemValue = "Strongly Disagree" itemLabel = "Strongly Disagree" />
+        </h:selectOneRadio>
+        
+        <h3>Question 4</h3>
+        <p>The instructor encouraged discussions and
+responded to questions.</p>
+        <h:selectOneRadio value="#{userData.answers[4]}">
+        <f:selectItem itemValue = "Strongly Agree" itemLabel = "Strongly Agree" />
+        <f:selectItem itemValue = "Agree" itemLabel = "Agree" />
+        <f:selectItem itemValue = "Neutral" itemLabel = "Neutral" />
+        <f:selectItem itemValue = "Disagree" itemLabel = "Disagree" />
+        <f:selectItem itemValue = "Strongly Disagree" itemLabel = "Strongly Disagree" />
+        </h:selectOneRadio>
+        
+        <h3>Question 5</h3>
+        <p>The instructor demonstrated in-depth
+knowledge of the subject</p>
+        <h:selectOneRadio value="#{userData.answers[5]}">
+        <f:selectItem itemValue = "Strongly Agree" itemLabel = "Strongly Agree" />
+        <f:selectItem itemValue = "Agree" itemLabel = "Agree" />
+        <f:selectItem itemValue = "Neutral" itemLabel = "Neutral" />
+        <f:selectItem itemValue = "Disagree" itemLabel = "Disagree" />
+        <f:selectItem itemValue = "Strongly Disagree" itemLabel = "Strongly Disagree" />
+        </h:selectOneRadio>
+       
+        <h3>Question 6</h3>
+        <p>The instructor appeared enthusiastic and
+interested</p>
+        <h:selectOneRadio value="#{userData.answers[6]}">
+        <f:selectItem itemValue = "Strongly Agree" itemLabel = "Strongly Agree" />
+        <f:selectItem itemValue = "Agree" itemLabel = "Agree" />
+        <f:selectItem itemValue = "Neutral" itemLabel = "Neutral" />
+        <f:selectItem itemValue = "Disagree" itemLabel = "Disagree" />
+        <f:selectItem itemValue = "Strongly Disagree" itemLabel = "Strongly Disagree" />
+        </h:selectOneRadio>
+        
+        <h3>Question 7</h3>
+        <p>The instructor used a variety of instructional
+methods to reach the course objectives (e.g.
+group discussions, student presentations, etc.)</p>
+        <h:selectOneRadio value="#{userData.answers[7]}">
+        <f:selectItem itemValue = "Strongly Agree" itemLabel = "Strongly Agree" />
+        <f:selectItem itemValue = "Agree" itemLabel = "Agree" />
+        <f:selectItem itemValue = "Neutral" itemLabel = "Neutral" />
+        <f:selectItem itemValue = "Disagree" itemLabel = "Disagree" />
+        <f:selectItem itemValue = "Strongly Disagree" itemLabel = "Strongly Disagree" />
+        </h:selectOneRadio>
+        
+        <h3>Question 8</h3>
+        <p>The instructor challenged students to do their
+best work.</p>
+        <h:selectOneRadio value="#{userData.answers[8]}">
+        <f:selectItem itemValue = "Strongly Agree" itemLabel = "Strongly Agree" />
+        <f:selectItem itemValue = "Agree" itemLabel = "Agree" />
+        <f:selectItem itemValue = "Neutral" itemLabel = "Neutral" />
+        <f:selectItem itemValue = "Disagree" itemLabel = "Disagree" />
+        <f:selectItem itemValue = "Strongly Disagree" itemLabel = "Strongly Disagree" />
+        </h:selectOneRadio>
+        
+<h:commandButton value = "Save and Continue" action ="#{userData.submit('Question2.xhtml')}" />
+</h:form> 
+    </h:body>
+</html>

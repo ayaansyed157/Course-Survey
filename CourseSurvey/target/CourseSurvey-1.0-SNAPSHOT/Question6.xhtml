@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+  
+      <h:head>
+        <title>Course Survey</title>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+    <h:form>
+        <h1>Overall Experience</h1>
+       
+        <h3>Question 22</h3>
+        <p>22. This was a worthwhile class.</p>
+        <h:selectOneRadio value="#{userData.answers[22]}">
+        <f:selectItem itemValue = "Yes" itemLabel = "Yes" />
+        <f:selectItem itemValue = "No" itemLabel = "No" />
+        </h:selectOneRadio>
+      
+        <h3>Question 23</h3>
+        <p>23. Would you recommend this course to a fellow student </p>
+        <h:selectOneRadio value="#{userData.answers[23]}">
+            
+        <f:selectItem itemValue = "Yes" itemLabel = "Yes" />
+        <f:selectItem itemValue = "No" itemLabel = "No" />
+        </h:selectOneRadio>
+      
+        <h3>Question 24</h3>
+        <p>24. Overall, how do you rate your experience in this course? </p>
+        <h:selectOneRadio value="#{userData.answers[24]}">
+        <f:selectItem itemValue = "Excellent" itemLabel = "Excellent" />
+        <f:selectItem itemValue = "Very Good" itemLabel = "Very Good" />
+        <f:selectItem itemValue = "Good" itemLabel = "Good" />
+        <f:selectItem itemValue = "Fair" itemLabel = "Fair" />
+        <f:selectItem itemValue = "Poor" itemLabel = "Poor" />
+        </h:selectOneRadio>
+        
+        <h3>Question 25</h3>
+        <p>25. How many hours did you spend per week on preparation/homework for this course? </p>
+        <h:selectOneRadio value="#{userData.answers[25]}">
+        <f:selectItem itemValue = "0-4h" itemLabel = "A: 0-4h" />
+        <f:selectItem itemValue = "5-8h" itemLabel = "B: 5-8h" />
+        <f:selectItem itemValue = "9-12h" itemLabel = "C: 9-12h" />
+        <f:selectItem itemValue = "12-16h" itemLabel = "D: 12-16h" />
+        </h:selectOneRadio>
+        
+        <h:outputLabel value = "Comments (Overall Experience)"/>
+        <h:inputText id = "Comments"  required = "true">
+            </h:inputText>
+        
+        
+        
+        <h:commandButton value = "Save and Continue" action ="#{userData.submit('Question7.xhtml')}" />
+</h:form> 
+        </h:body>
+</html>
